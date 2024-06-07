@@ -22,6 +22,15 @@ import org.ajoberstar.grgit.Grgit
 plugins {
     id("build-logic.root-build")
     id("com.github.vlsi.stage-vote-release")
+    id "org.sonarqube" version "4.4.1.3373"    
+}
+
+sonar {
+  properties {
+    property "sonar.projectKey", "performancetest_hcdtest"
+    property "sonar.organization", "performancetest"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
 }
 
 fun Project.boolProp(name: String) =
