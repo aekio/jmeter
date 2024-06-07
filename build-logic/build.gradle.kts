@@ -18,6 +18,14 @@
 plugins {
     `embedded-kotlin` apply false
     id("com.github.autostyle") version "3.2"
+    id "org.sonarqube" version "4.4.1.3373"
+}
+sonar {
+  properties {
+    property "sonar.projectKey", "performancetest_hcdtest"
+    property "sonar.organization", "performancetest"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
 }
 
 allprojects {
